@@ -21,7 +21,7 @@ export function Confirm({ show, message, onConfirm, onDismiss }) {
   // Initialisations -----------------------------
   // State ---------------------------------------
   // Handlers ------------------------------------
-  const handleDismiss = () => {
+  const handleConfirm = () => {
     onConfirm();
     onDismiss();
   };
@@ -31,8 +31,8 @@ export function Confirm({ show, message, onConfirm, onDismiss }) {
     <Modal show={show} title='Confirmation needed' modalPaneClass='notificationConfirm'>
       <p>{message}</p>
       <Action.Tray>
-        <Action.Yes showText onClick={handleDismiss} />
-        <Action.Dismiss showText onClick={onDismiss} />
+        <Action.Yes showText onClick={onConfirm} />
+        <Action.Dismiss showText onClick={handleConfirm} />
       </Action.Tray>
     </Modal>
   );
