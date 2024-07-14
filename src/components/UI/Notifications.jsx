@@ -31,8 +31,8 @@ export function Confirm({ show, message, onConfirm, onDismiss }) {
     <Modal show={show} title='Confirmation needed' modalPaneClass='notificationConfirm'>
       <p>{message}</p>
       <Action.Tray>
-        <Action.Yes showText onClick={onConfirm} />
-        <Action.Dismiss showText onClick={handleConfirm} />
+        <Action.Yes showText onClick={handleConfirm} />
+        <Action.Dismiss showText onClick={onDismiss} />
       </Action.Tray>
     </Modal>
   );
